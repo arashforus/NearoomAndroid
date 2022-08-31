@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SponsorshipActivity_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SponsorshipActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/SponsorshipActivity_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/toolbarSubtitleColor"
+        app:titleTextColor="@color/toolbarTitleColor" />
+
+    <TextView
+        android:id="@+id/SponsorshipActivity_CurrentText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Current Sponsorship"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SponsorshipActivity_Toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SponsorshipActivity_CardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:background="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="15sp"
+        app:cardElevation="1sp"
+        app:contentPadding="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/SponsorshipActivity_NextSponsorship"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SponsorshipActivity_CurrentText">
+
+        <ScrollView
+            android:id="@+id/SponsorshipActivity_ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/SponsorshipActivity_LayoutInner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/SponsorshipActivity_Logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/nearoom_small" />
+
+                <TextView
+                    android:id="@+id/SponsorshipActivity_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:text="Nearoom messaging app"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sponsorshipActivity_Desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This app is developed in android for whom want to know hor soulmate in favorite activities in around area . A messagin app with simple UI and full of tools for chatting and enabling to create a room with cooardinate geo location and nearby friends can join it and make activities"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/sponsorshipActivity_Button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="Visit Our Website" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/SponsorshipActivity_NextSponsorship"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Be next sponsorship"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

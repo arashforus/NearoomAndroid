@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.transformationlayout.TransformationLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Chatlistitem_TransformationLayout"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    app:transformation_direction="auto"
+    app:transformation_duration="400"
+    app:transformation_elevationShadowEnabled="true"
+    app:transformation_fadeMode="through"
+    app:transformation_fitMode="auto"
+    app:transformation_pathMode="linear">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Chatlistitem_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10sp"
+        android:paddingTop="10sp"
+        android:paddingEnd="10sp"
+        android:paddingBottom="2sp">
+
+        <ImageView
+            android:id="@+id/ChatlistItem_Pic"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/Chatlistitem_Unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nearoom_find_button_background"
+            android:minWidth="22sp"
+            android:padding="2sp"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Chatlistitem_Lastchat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Chatlistitem_Lastchat" />
+
+        <TextView
+            android:id="@+id/Chatlistitem_Lastchat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:maxLines="1"
+            android:text="salam bacheha ... chetorin ?"
+            android:textAlignment="viewStart"
+            android:textColor="@color/recyclerViewChatListLastChat"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ChatlistItem_Pic"
+            app:layout_constraintEnd_toStartOf="@+id/Chatlistitem_Unread"
+            app:layout_constraintStart_toStartOf="@+id/Chatlistitem_Username"
+            app:layout_constraintTop_toBottomOf="@+id/Chatlistitem_Username" />
+
+        <TextView
+            android:id="@+id/Chatlistitem_Username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:text="Arashforus"
+            android:textAlignment="viewStart"
+            android:textColor="@color/recyclerViewChatListUsername"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/Chatlistitem_Time"
+            app:layout_constraintStart_toEndOf="@+id/ChatlistItem_Pic"
+            app:layout_constraintTop_toTopOf="@+id/ChatlistItem_Pic" />
+
+        <TextView
+            android:id="@+id/Chatlistitem_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yesterday"
+            android:textColor="@color/recyclerViewChatListTime"
+            app:layout_constraintBottom_toBottomOf="@+id/Chatlistitem_Username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.skydoves.transformationlayout.TransformationLayout>

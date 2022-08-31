@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:textAlignment="center"
+    tools:context=".BackgroundLiveWallpaperActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/BackgroundLiveWallpaperActivity_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/BackgroundLiveWallpaperActivity_CancelButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/BackgroundLiveWallpaperActivity_ApplyButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Apply" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BackgroundLiveWallpaperActivity_PreviewLayout"
+        android:layout_width="250sp"
+        android:layout_height="400sp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@+id/BackgroundLiveWallpaperActivity_ExtraLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BackgroundLiveWallpaperActivity_Toolbar">
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.arashforus.nearroom.Background_particle
+            android:id="@+id/BackgroundLiveWallpaperActivity_PreviewParticle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+        <com.arashforus.nearroom.Background_Bubbles
+            android:id="@+id/BackgroundLiveWallpaperActivity_PreviewBubbles"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+        <com.arashforus.nearroom.Background_Rainbow
+            android:id="@+id/BackgroundLiveWallpaperActivity_PreviewRainbow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/MyChat_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/mychat_layout_margin_start"
+                android:background="@drawable/bubble_mychat"
+                android:elevation="@dimen/mychat_elevation">
+
+                <TextView
+                    android:id="@+id/mychat_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hey buddy"
+                    android:textColor="@color/myChatMessageColor"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mychat_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:17"
+                    android:textColor="@color/myChatTimestampColor"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/mychat_tik"
+                    app:layout_constraintTop_toBottomOf="@+id/mychat_message" />
+
+                <ImageView
+                    android:id="@+id/mychat_tik"
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mychat_message"
+                    app:srcCompat="@drawable/ic_tik_seen_final" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Yourchat_LayoutBubble"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="@dimen/yourchat_layout_margin_end"
+                android:background="@drawable/bubble_yourchat"
+                android:elevation="@dimen/yourchat_elevation">
+
+                <TextView
+                    android:id="@+id/yourchat_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="oh hi"
+                    android:textColor="@color/yourChatMessageColor"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/yourchat_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:17"
+                    android:textColor="@color/yourChatTimestampColor"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/yourchat_message" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/BackgroundLiveWallpaperActivity_SendMessageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/buttom_type_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/BackgroundLiveWallpaperActivity_OpenSendMenu"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_attach_file"
+                app:tint="@android:color/black" />
+
+            <EditText
+                android:id="@+id/BackgroundLiveWallpaperActivity_Message2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Type your message"
+                android:inputType="textMultiLine|text"
+                android:maxLines="1"
+                android:paddingTop="7sp"
+                android:paddingBottom="7sp"
+                android:singleLine="true"
+                android:textColor="#191919"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/BackgroundLiveWallpaperActivity_SendButtonLayout"
+                app:layout_constraintStart_toEndOf="@+id/BackgroundLiveWallpaperActivity_OpenSendMenu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_SendButtonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/send_button_background"
+                android:gravity="center_vertical"
+                android:minWidth="40sp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="50sp"
+                    android:layout_height="40sp"
+                    android:layout_weight="1"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_dots" />
+
+                <ImageView
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_baseline_send" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/BackgroundLiveWallpaperActivity_WallpapersLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BackgroundLiveWallpaperActivity_ParticleButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Particle" />
+
+            <Button
+                android:id="@+id/BackgroundLiveWallpaperActivity_BubblesButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Circles" />
+
+            <Button
+                android:id="@+id/BackgroundLiveWallpaperActivity_RainbowButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rainbow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="More coming soon ..."
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BackgroundLiveWallpaperActivity_ExtraLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="false"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/BackgroundLiveWallpaperActivity_WallpapersLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/BackgroundLiveWallpaperActivity_ExtraRainbowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraRainbowAlphaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Colors saturation"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraRainbowAlphaSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/rainbow_alpha"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraRainbowSpeedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Change speed"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraRainbowSpeedSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/rainbow_speed"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleNumbersLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Particle numbers"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleNumbersSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/particle_num"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleSpeedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Particle speed"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleSpeedSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/particle_speed"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleSizeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Particle sizes"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleSizeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/particle_size"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleBackgroundColorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Background color"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleBackgroundColorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleColorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Particle color"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraParticleColorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesNumbersLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bubble numbers"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesNumbersSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/bubbles_num"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesSpeedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bubble speed"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesSpeedSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/bubbles_speed"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesBackgroundColorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Background color"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesBackgroundColorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesColorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bubbles color"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/BackgroundLiveWallpaperActivity_ExtraBubblesColorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BackgroundLiveWallpaperActivity_ResetFactoryLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/BackgroundLiveWallpaperActivity_Toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_baseline_settings_backup_restore" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Factory"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

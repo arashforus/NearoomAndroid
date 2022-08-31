@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Nearoom</string>
+    <string name="title_activity_login">Nearoom</string>
+
+
+    <!-- Login Page -->
+    <string name="forget_password">"Forget your password ?"</string>
+    <string name="singup">"Want to join or sign up"</string>
+
+    <!-- Register Number Page -->
+    <string name="register_number_decription">Please enter your phone number</string>
+    <string name="register_number_button">Send verification sms</string>
+
+    <!-- Receive Code Page -->
+    <string name="receive_code_decription">Input the verification code</string>
+    <string name="receive_code_change_number">"This phone doesn't belong to you ? Change Number"</string>
+    <string name="receive_code_send_again">"Didn't receive verification code ? Send again"</string>
+    <string name="receive_code_next_button">Next</string>
+
+    <!-- Signup Page -->
+    <string name="signup_decription">Fill all the blank spaces</string>
+    <string name="signup_button">Complete registration</string>
+    <string name="signup_check_terms">I read all the terms and accept them</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+    <!-- Intro Sliders -->
+    <array name="intro_slider_titles">
+        <item>Simple &amp; Fast</item>
+        <item>Nearby rooms</item>
+        <item>Live wallpapers</item>
+        <item>Free ( NO ADS )</item>
+        <item>Keep in touch</item>
+    </array>
+
+    <array name="intro_slider_Desc">
+        <item>very user friendly interface , fast messaging</item>
+        <item>you can search nearby rooms with your location</item>
+        <item>You can set live wallpapers for your chat page and customize it</item>
+        <item>There is no advertisement or paid in contents</item>
+        <item>you never miss a message with notifications</item>
+    </array>
+
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/NearoomsFragment_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    app:layoutDescription="@xml/fragment_nearooms_scene"
+    tools:context=".NearoomsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/NearoomsFragment_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/NearoomsFragment_FindLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/NearoomsFragment_FindLayout"
+        android:layout_width="0dp"
+        android:layout_height="40sp"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:background="@drawable/nearoom_find_button_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/NearoomsFragment_TwoLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/NearoomsFragment_FindButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:stateListAnimator="@android:anim/bounce_interpolator"
+            android:text="Find nearooms"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NearoomsFragment_FindLayoutAlt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/NearoomsFragment_TwoLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/NearoomsFragment_FindButtonAlt"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:stateListAnimator="@android:anim/bounce_interpolator"
+            android:text="Find nearooms" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NearoomsFragment_TwoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/NearoomsFragment_LastResultButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stateListAnimator="@android:anim/bounce_interpolator"
+            android:text="Last search result" />
+
+        <Button
+            android:id="@+id/NearoomsFragment_CreateNearoomButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stateListAnimator="@android:anim/bounce_interpolator"
+            android:text="Create nearoom" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

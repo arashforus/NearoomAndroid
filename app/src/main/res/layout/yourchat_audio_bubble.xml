@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/YourChat_Audio_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/yourchat_layout_margin_from_start"
+    android:layout_marginTop="@dimen/yourchat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/yourchat_layout_margin_from_start"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/YourChat_Audio_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/yourchat_layout_margin_end"
+        android:background="@drawable/bubble_yourchat"
+        android:elevation="@dimen/yourchat_elevation"
+        android:padding="5sp">
+
+
+        <TextView
+            android:id="@+id/YourChat_Audio_Sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/YourChat_Audio_ProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/bubble_progress_bar_width_height"
+            android:layout_height="@dimen/bubble_progress_bar_width_height"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_Audio_Sender" />
+
+        <TextView
+            android:id="@+id/YourChat_Audio_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:17"
+            android:textColor="@color/yourChatTimestampColor"
+            android:textSize="@dimen/bubble_timestamp_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_Audio_SeekBar" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/YourChat_Audio_SeekBar"
+            android:layout_width="230sp"
+            android:layout_height="wrap_content"
+            android:progressTint="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/YourChat_Audio_Play"
+            app:layout_constraintTop_toTopOf="@+id/YourChat_Audio_Play" />
+
+        <ImageView
+            android:id="@+id/YourChat_Audio_Play"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_Audio_Sender"
+            app:srcCompat="@drawable/ic_baseline_play_arrow"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:id="@+id/YourChat_Audio_Duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="01:16"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/YourChat_Audio_SeekBar"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_Audio_SeekBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

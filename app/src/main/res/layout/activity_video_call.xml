@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/VideoCallActivity_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoCallActivity">
+
+    <TextureView
+        android:id="@+id/VideoCallActivity_MyCam"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextureView
+        android:id="@+id/VideoCallActivity_YourCam"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/VideoCallActivity_Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="USERNAME"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/VideoCallActivity_EndCall"
+        app:layout_constraintEnd_toStartOf="@+id/VideoCallActivity_Time"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/VideoCallActivity_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="4dp"
+        android:text="06:19"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/VideoCallActivity_Username"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/VideoCallActivity_EndCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="end call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/VideoCallActivity_SwitchCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="switch camera"
+        app:layout_constraintEnd_toStartOf="@+id/VideoCallActivity_EndCall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/VideoCallActivity_EndCall" />
+
+    <Button
+        android:id="@+id/VideoCallActivity_Mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/VideoCallActivity_EndCall"
+        app:layout_constraintTop_toTopOf="@+id/VideoCallActivity_EndCall" />
+</androidx.constraintlayout.widget.ConstraintLayout>

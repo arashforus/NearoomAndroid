@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/DialogueContactsFragmentMenu_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/DialogueContactsFragmentMenu_Pic"
+                android:layout_width="200sp"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:padding="10sp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/DialogueContactsFragmentMenu_Fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text="TextView"
+                        android:textColor="@color/recyclerViewContactsFullName"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/DialogueContactsFragmentMenu_FavouriteStar"
+                        android:layout_width="150sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:tint="@color/colorPrimaryDark"
+                        app:srcCompat="@drawable/ic_baseline_star" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/DialogueContactsFragmentMenu_Username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="TextView"
+                    android:textColor="@color/recyclerViewContactsUsername" />
+
+                <TextView
+                    android:id="@+id/DialogueContactsFragmentMenu_Status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:text="TextView"
+                    android:textColor="@color/recyclerViewContactsStatus" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/DialogueContactsFragmentMenu_SeeProfileButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="See profile" />
+
+            <Button
+                android:id="@+id/DialogueContactsFragmentMenu_AddFavouriteButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add to favourite" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/DialogueContactsFragmentMenu_SendMessageButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5sp"
+            android:text="Send message" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

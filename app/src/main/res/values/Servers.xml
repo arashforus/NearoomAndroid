@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="server">https://nearoom.iran.liara.run</string>
+    <string name="serverlocal">http://192.168.1.51:8000/</string>
+</resources>

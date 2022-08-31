@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/VoiceCallActivity_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/voicecall_background"
+    tools:context=".VoiceCallActivity">
+
+    <ImageView
+        android:id="@+id/VoiceCallActivity_Pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VoiceCallActivity_Username"
+        app:srcCompat="@drawable/defaultprofile" />
+
+    <Button
+        android:id="@+id/VoiceCallActivity_Mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mute"
+        app:layout_constraintEnd_toStartOf="@+id/VoiceCallActivity_EndCall"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/VoiceCallActivity_EndCall" />
+
+    <Button
+        android:id="@+id/VoiceCallActivity_EndCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="End Call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VoiceCallActivity_Time" />
+
+    <Button
+        android:id="@+id/VoiceCallActivity_AddCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toEndOf="@+id/VoiceCallActivity_EndCall"
+        app:layout_constraintTop_toTopOf="@+id/VoiceCallActivity_EndCall" />
+
+    <TextView
+        android:id="@+id/VoiceCallActivity_Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="USERNAME"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/VoiceCallActivity_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Connecting ..."
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VoiceCallActivity_Pic" />
+
+    <TextView
+        android:id="@+id/VoiceCallActivity_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="05:36"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VoiceCallActivity_Status" />
+</androidx.constraintlayout.widget.ConstraintLayout>

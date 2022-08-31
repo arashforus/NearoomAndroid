@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="MaxOfMember">
+        <item name="Member10">10</item>
+        <item name="Member20">20</item>
+        <item name="Member30">30</item>
+        <item name="Member40">40</item>
+        <item name="Member50">50</item>
+        <item name="Member60">60</item>
+        <item name="Member70">70</item>
+        <item name="Member80">80</item>
+        <item name="Member90">90</item>
+        <item name="Member100">100</item>
+    </string-array>
+
+    <string-array name="RoomCategories">
+        <item name="General">General</item>
+        <item name="Cafe">Cafe/Restaurant</item>
+        <item name="Store">Store/Mall</item>
+        <item name="Cinema">Cinema/Theatre</item>
+        <item name="Park">Park</item>
+        <item name="House">House/Apartment</item>
+        <item name="Activity">Activity</item>
+        <item name="FriendHub">FriendHub</item>
+        <item name="Work">Work</item>
+    </string-array>
+
+    <string-array name="ContactUsSubjects">
+        <item name="General">General</item>
+        <item name="Sponsorship">Sponsorship</item>
+        <item name="ReportUsername">Report Username</item>
+        <item name="ReportRoom">Report Nearoom</item>
+        <item name="ReportBug">Report a bug</item>
+        <item name="Suggestion">Suggestion</item>
+    </string-array>
+
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <!-- Particle Live Wallpaper parameters -->
+    <string-array name="particle_num">
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+    </string-array>
+
+    <string-array name="particle_speed">
+        <item>slow</item>
+        <item>medium</item>
+        <item>high</item>
+    </string-array>
+
+    <string-array name="particle_size">
+        <item>very small</item>
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+        <item>very large</item>
+    </string-array>
+
+    <!-- Bubbles Live Wallpaper parameters -->
+    <string-array name="bubbles_num">
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>11</item>
+    </string-array>
+
+    <string-array name="bubbles_speed">
+        <item>slow</item>
+        <item>medium</item>
+        <item>high</item>
+    </string-array>
+
+    <!-- Rainbow Live Wallpaper parameters -->
+    <string-array name="rainbow_alpha">
+        <item>12%</item>
+        <item>25%</item>
+        <item>37%</item>
+        <item>50%</item>
+        <item>67%</item>
+        <item>75%</item>
+        <item>87%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="rainbow_speed">
+        <item>very slow</item>
+        <item>slow</item>
+        <item>medium</item>
+        <item>high</item>
+        <item>very high</item>
+    </string-array>
+
+</resources>

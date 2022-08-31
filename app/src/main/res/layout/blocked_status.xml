@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/BlockedStatus_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0sp"
+    android:visibility="gone">
+
+    <View
+        android:id="@+id/BlockedStatus_Background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/buttom_type_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BlockedStatus_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This user is block"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BlockedStatus_UnblockButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/BlockedStatus_Icon"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BlockedStatus_Text"
+        app:layout_constraintEnd_toStartOf="@+id/BlockedStatus_Text"
+        app:layout_constraintTop_toTopOf="@+id/BlockedStatus_Text"
+        app:srcCompat="@drawable/ic_baseline_block"
+        app:tint="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/BlockedStatus_UnblockButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/send_button_background"
+        android:text="Unblock"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/BlockedStatus_Background"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

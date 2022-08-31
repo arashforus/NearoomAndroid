@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Yourchat_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:layout_marginStart="@dimen/yourchat_layout_margin_from_start"
+    android:layout_marginTop="@dimen/yourchat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/yourchat_layout_margin_from_start"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Yourchat_LayoutBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginEnd="@dimen/yourchat_layout_margin_end"
+        android:background="@drawable/bubble_yourchat"
+        android:elevation="@dimen/yourchat_elevation">
+
+        <TextView
+            android:id="@+id/yourchat_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/yourchat_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textColor="@color/yourChatMessageColor"
+            android:textSize="@dimen/bubble_message_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourchat_sender" />
+
+        <TextView
+            android:id="@+id/yourchat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:17"
+            android:textColor="@color/yourChatTimestampColor"
+            android:textSize="@dimen/bubble_timestamp_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yourchat_message" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

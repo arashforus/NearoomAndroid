@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MyChat_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/mychat_layout_margin_from_end"
+    android:layout_marginTop="@dimen/mychat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/mychat_layout_margin_from_end"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MyChat_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/mychat_layout_margin_start"
+        android:background="@drawable/bubble_mychat"
+        android:elevation="@dimen/mychat_elevation">
+
+        <TextView
+            android:id="@+id/mychat_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textColor="@color/myChatMessageColor"
+            android:textSize="@dimen/bubble_message_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mychat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/bubble_timestamp_margin_end"
+            android:text="19:17"
+            android:textColor="@color/myChatTimestampColor"
+            android:textSize="@dimen/bubble_timestamp_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mychat_tik"
+            app:layout_constraintTop_toBottomOf="@+id/mychat_message" />
+
+        <ImageView
+            android:id="@+id/mychat_tik"
+            android:layout_width="@dimen/bubble_tik_width_height"
+            android:layout_height="@dimen/bubble_tik_width_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mychat_message" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

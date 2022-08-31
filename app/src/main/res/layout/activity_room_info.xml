@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/RoomInfoActivity_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/toolbarSubtitleColor"
+        app:titleTextColor="@color/toolbarTitleColor" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/RoomInfoActivity_ScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomInfoActivity_Toolbar">
+
+        <LinearLayout
+            android:id="@+id/RoomInfoActivity_LinearLayoutOuter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/RoomInfoActivity_InfoIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/RoomInfoActivity_InfoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Picture and Info"
+                    android:textAlignment="center"
+                    android:textColor="@color/roomInfoTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/RoomInfoActivity_RoomPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:scaleType="centerCrop"
+                        android:transitionName="profilePic"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/RoomInfoActivity_RemovePictureButton"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Remove picture" />
+
+                        <Button
+                            android:id="@+id/RoomInfoActivity_ChangePictureButton"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Change picture" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_RoomNameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Room name"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/RoomInfoActivity_RoomNameValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:padding="10sp"
+                        android:text="never room"
+                        android:textColor="@color/roomInfoText"
+                        android:textSize="18sp"
+                        android:transitionName="username" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_CategoryText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Category"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_CategoryValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="10sp"
+                        android:text="Cafe / Resturant"
+                        android:textColor="@color/roomInfoText"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/RoomInfoActivity_CategorySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/white"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/RoomCategories"
+                        android:padding="10sp"
+                        android:spinnerMode="dialog"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_DescriptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Description"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/RoomInfoActivity_DescriptionValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:padding="10sp"
+                        android:text="work hard or go home"
+                        android:textColor="@color/roomInfoText"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_CapacityText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Capacity"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_CapacityValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="textPersonName|text"
+                        android:padding="10sp"
+                        android:text="15 / 50"
+                        android:textColor="@color/roomInfoText"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/RoomInfoActivity_CapacitySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/white"
+                        android:dropDownWidth="match_parent"
+                        android:entries="@array/MaxOfMember"
+                        android:padding="10sp"
+                        android:spinnerMode="dialog"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/RoomInfoActivity_CancelProfileButton"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cancel"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/RoomInfoActivity_ChangeProfileButton"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Change " />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/RoomInfoActivity_StaticsIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/RoomInfoActivity_StaticsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Statics"
+                    android:textAlignment="center"
+                    android:textColor="@color/roomInfoTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                    app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                    app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity__MessagesSentText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:text="Messages Sent"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoSubtitle"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_MessagesSentNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoText"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_MessagesSentUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="messages"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="5sp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                    app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                    app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_DaysJoinedText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:text="Days Joined"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoSubtitle"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_DaysJoinedNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoText"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_DaysJoinedUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="days ago"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="5sp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                    app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                    app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_DaysCreatedText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:text="Days created"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoSubtitle"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_DaysCreatedNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoText"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/RoomInfoActivity_DaysCreatedUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="days ago"
+                            android:textAlignment="center"
+                            android:textColor="@color/roomInfoText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/RoomInfoActivity_MembersIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/RoomInfoActivity_MembersTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Members"
+                    android:textAlignment="center"
+                    android:textColor="@color/roomInfoTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_MemberNumberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="12 Members"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view25"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_NoMemberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No Member"
+                        android:textAlignment="center"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RoomInfoActivity_MembersRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/RoomInfoActivity_ActionsIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/RoomInfoActivity_ActionsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Actions"
+                    android:textAlignment="center"
+                    android:textColor="@color/roomInfoTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/RoomInfoActivity_MuteNotificationSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="Mute notifications"
+                        android:textColor="@color/roomInfoText"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/RoomInfoActivity_ReportButton"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Report this nearoom" />
+
+                    <Button
+                        android:id="@+id/RoomInfoActivity_LeaveButton"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Leave this nearoom" />
+
+                    <Button
+                        android:id="@+id/RoomInfoActivity_RemoveNearoomButton"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Remove this nearoom" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/RoomInfoActivity_MediasIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/RoomInfoActivity_MediasTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Medias"
+                    android:textAlignment="center"
+                    android:textColor="@color/roomInfoTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_ImagesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Images"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_NoImageText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/RoomInfoActivity_ImagesRecyclerView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_VideosText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Videos"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_NoVideoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No Video"
+                        android:textAlignment="center"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/RoomInfoActivity_VideosRecyclerView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_FilesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Files"
+                        android:textColor="@color/roomInfoSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/RoomInfoActivity_NoFileText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No File"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:textColor="@color/roomInfoSubtitle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RoomInfoActivity_FilesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/RoomInfoActivity_FullProfilePic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

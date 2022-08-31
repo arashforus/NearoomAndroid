@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/yourChatDownloadLayoutColor" />
+    <corners android:radius="30sp"
+        android:bottomLeftRadius="30sp"
+        android:bottomRightRadius="30sp"/>
+    <padding
+        android:bottom="0sp"
+        android:top="0sp"
+        android:left="0sp"
+        android:right="0sp" />
+    <stroke android:color="#000000"
+        android:width="2sp"
+        />
+
+</shape>

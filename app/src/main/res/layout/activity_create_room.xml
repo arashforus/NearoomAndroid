@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".CreateRoomActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/CreateRoomActivity_CreateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map_fragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                tools:context=".MainActivity" />
+
+            <EditText
+                android:id="@+id/CreateRoomActivity_RoomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Enter your room name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/CreateRoomActivity_CategoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Category" />
+
+            <Spinner
+                android:id="@+id/CreateRoomActivity_Category"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/RoomCategories"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/CreateRoomActivity_MemberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:text="Max of members" />
+
+            <Spinner
+                android:id="@+id/CreateRoomActivity_MemberNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/MaxOfMember"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/CreateRoomActivity_Status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="5sp"
+                android:text="Room name is exist .... select another one"
+                android:textAlignment="center"
+                android:textColor="@color/buttonNegetive"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/CreateRoomActivity_CreateButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0sp"
+        android:padding="0sp"
+        android:text="Create Room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

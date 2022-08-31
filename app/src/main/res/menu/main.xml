@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_my_profile"
+        android:title="My profile" />
+    <item
+        android:id="@+id/menu_setting"
+        android:title="Setting"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_log_out"
+        android:title="Log out" />
+    <item
+        android:id="@+id/MainMenu_Search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="Search"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#595F98</color>
+    <color name="colorPrimaryDark">#4B5080</color>
+    <color name="colorAccent">#4B5080</color>
+    <color name="colorButton">#4B5080</color>
+    <color name="colorBackground">#CEA2AC</color>
+
+    <!-- Toolbar -->
+    <color name="toolbarTitleColor">#FFFFFF</color>
+    <color name="toolbarSubtitleColor">#FFFFFF</color>
+
+    <!-- Buttons -->
+    <color name="buttonPositive">#059C00</color>
+    <color name="buttonNegetive">#CC0000</color>
+
+    <!-- Texts -->
+    <color name="textPositive">#2E7A50</color>
+    <color name="textNegetive">#753232</color>
+
+    <!-- Icon -->
+    <color name="IconBackground">#FFFFFF</color>
+
+    <!-- Live Wallpaper -->
+    <color name="sparkleWallpaperBackgrundColor">#9C9FBC</color>
+    <color name="sparkleWallpaperDotColor">#470240</color>
+
+    <!-- Nearooms Fragment -->
+    <color name="nearoomsFragmentRippleFrom">#595F98</color>
+    <color name="nearoomsFragmentRippleTo">#FFFFFF</color>
+
+    <!-- Contacts Fragment -->
+    <color name="contactsFragmentDivider">#595F98</color>
+
+    <!-- Password Strength -->
+    <color name="passwordStrengthVeryWeak">#FFF200</color>
+    <color name="passwordStrengthWeak">#FFA200</color>
+    <color name="passwordStrengthMedium">#F37100</color>
+    <color name="passwordStrengthStrong">#FF5900</color>
+    <color name="passwordStrengthVeryStrong">#FF2600</color>
+
+    <!-- Write Text In Imgae Editor Pallet -->
+    <color name="textPalletColor1">#000000</color>
+    <color name="textPalletColor2">#878787</color>
+    <color name="textPalletColor3">#FFFFFF</color>
+    <color name="textPalletColor4">#CDDC00</color>
+    <color name="textPalletColor5">#42DF00</color>
+    <color name="textPalletColor6">#006DE3</color>
+    <color name="textPalletColor7">#9000EA</color>
+    <color name="textPalletColor8">#E400AB</color>
+    <color name="textPalletColor9">#E40000</color>
+
+    <!-- Solid Background Pallet -->
+    <color name="solidPalletColor1">#000000</color>
+    <color name="solidPalletColor2">#878787</color>
+    <color name="solidPalletColor3">#FFFFFF</color>
+    <color name="solidPalletColor4">#CDDC00</color>
+    <color name="solidPalletColor5">#42DF00</color>
+    <color name="solidPalletColor6">#006DE3</color>
+    <color name="solidPalletColor7">#9000EA</color>
+    <color name="solidPalletColor8">#E400AB</color>
+    <color name="solidPalletColor9">#E40000</color>
+
+    <!-- Type Message Layout -->
+    <color name="typeMessageLayoutColor">#BFC5FF</color>
+
+    <!-- Mychat and Yourchat Bubble  -->
+    <color name="myChatBubbleColor">#ADB1DF</color>
+    <color name="yourChatBubbleColor">#CACCE1</color>
+    <color name="myChatDownloadLayoutColor">#FFFFFF</color>
+    <color name="yourChatDownloadLayoutColor">#FFFFFF</color>
+    <color name="myChatMessageColor">#000000</color>
+    <color name="yourChatMessageColor">#000000</color>
+    <color name="myChatTimestampColor">#80000000</color>
+    <color name="yourChatTimestampColor">#80000000</color>
+    <color name="myChatFileSizeColor">#000000</color>
+    <color name="yourChatFileSizeColor">#000000</color>
+    <color name="myChatDownloadIconColor">#000000</color>
+    <color name="yourChatDownloadIconColor">#000000</color>
+    <color name="myChatTimeShadowColor">#FFFFFF</color>
+    <color name="yourChatTimeShadowColor">#FFFFFF</color>
+
+    <!-- Intro Sliders Color  -->
+    <color name="Slider1Color">#B3ACD1</color>
+    <color name="Slider2Color">#AEB365</color>
+    <color name="Slider3Color">#85B185</color>
+
+    <!-- Photo Editor -->
+    <color name="photoEditorBackground">#000000</color>
+    <color name="photoEditorToolsBackground">#151515</color>
+    <color name="photoEditorToolsTextColor">#FFFFFF</color>
+    <color name="photoEditorToolsIconColor">#FFFFFF</color>
+
+    <!-- MyProfile Page Colors -->
+    <color name="myProfileTitle">#000000</color>
+    <color name="myProfileSubtitle">#C6C6C6</color>
+    <color name="myProfileText">#FFFFFF</color>
+
+    <!-- View Contact Page Colors -->
+    <color name="viewContactTitle">#000000</color>
+    <color name="viewContactSubtitle">#C6C6C6</color>
+    <color name="viewContactText">#FFFFFF</color>
+
+    <!-- Room Info Page Colors -->
+    <color name="roomInfoTitle">#000000</color>
+    <color name="roomInfoSubtitle">#C6C6C6</color>
+    <color name="roomInfoText">#FFFFFF</color>
+
+    <!-- Setting Page Colors -->
+    <color name="settingTitle">#000000</color>
+    <color name="settingSubtitle">@color/white_with_disable_state</color>
+    <color name="settingText">@color/gray_with_disable_state</color>
+
+    <!-- Change Password Page Colors -->
+    <color name="changePasswordSubtitle">#C6C6C6</color>
+    <color name="changePasswordText">#FFFFFF</color>
+
+    <!-- Contact Us Page Colors -->
+    <color name="contactUsSubtitle">#C6C6C6</color>
+    <color name="contactUsText">#FFFFFF</color>
+
+    <!-- Recycler View Contacts -->
+    <color name="recyclerViewContactsFullName">#000000</color>
+    <color name="recyclerViewContactsUsername">#777777</color>
+    <color name="recyclerViewContactsStatus">#777777</color>
+
+    <!-- Recycler View Chat list -->
+    <color name="recyclerViewChatListUsername">#000000</color>
+    <color name="recyclerViewChatListLastChat">#777777</color>
+    <color name="recyclerViewChatListTime">#777777</color>
+
+    <!-- Recycler View Nearoom list -->
+    <color name="recyclerViewNearoomListName">#000000</color>
+    <color name="recyclerViewNearoomListCategory">#777777</color>
+    <color name="recyclerViewNearoomListDescription">#777777</color>
+    <color name="recyclerViewNearoomListDistance">#777777</color>
+    <color name="recyclerViewNearoomListNumberJoin">#777777</color>
+
+</resources>

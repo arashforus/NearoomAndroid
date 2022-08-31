@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ContactsFragment_FavouritesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/contact_fragment_title_padding_start"
+                    android:paddingTop="@dimen/contact_fragment_title_padding_top"
+                    android:paddingEnd="@dimen/contact_fragment_title_padding_end"
+                    android:paddingBottom="@dimen/contact_fragment_title_padding_bottom"
+                    android:text="Favourites"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ContactsFragment_FavouritesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/ContactsFragment_NoFavouriteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:gravity="center"
+                    android:text="No favourite list"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="7sp"
+                    android:background="@color/contactsFragmentDivider" />
+
+                <TextView
+                    android:id="@+id/ContactsFragment_OnlinesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/contact_fragment_title_padding_start"
+                    android:paddingTop="@dimen/contact_fragment_title_padding_top"
+                    android:paddingEnd="@dimen/contact_fragment_title_padding_end"
+                    android:paddingBottom="@dimen/contact_fragment_title_padding_bottom"
+                    android:text="Onlines"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ContactsFragment_OnlinesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/ContactsFragment_NoOnlineText"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:gravity="center"
+                    android:text="No online"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="7sp"
+                    android:background="@color/contactsFragmentDivider" />
+
+                <TextView
+                    android:id="@+id/ContactsFragment_AllContactsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/contact_fragment_title_padding_start"
+                    android:paddingTop="@dimen/contact_fragment_title_padding_top"
+                    android:paddingEnd="@dimen/contact_fragment_title_padding_end"
+                    android:paddingBottom="@dimen/contact_fragment_title_padding_bottom"
+                    android:text="All contacts"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ContactsFragment_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/ContactsFragment_NoAllText"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:gravity="center"
+                    android:text="Nobody register yet , Invite your friends"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/ContactsFragment_InviteButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Invite a friend" />
+
+            <Button
+                android:id="@+id/ContactsFragment_AddButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add a contact" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/ContactsFragment_PermissonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="25sp"
+        android:text="You should give permisson to your contacs for view this section"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ContactsFragment_PermissonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Give Permisson"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ContactsFragment_PermissonText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LastFileItem_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2sp">
+
+    <ImageView
+        android:id="@+id/LastFileItem_Icon"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_file_" />
+
+    <Button
+        android:id="@+id/LastFileItem_SeeAllButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="1"
+        android:background="#595959"
+        android:text="see all"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/LastFileItem_Size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.5 Mb"
+        android:textColor="#CDCDCD"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/LastFileItem_Icon"
+        app:layout_constraintStart_toStartOf="@+id/LastFileItem_Name"
+        app:layout_constraintTop_toBottomOf="@+id/LastFileItem_Name" />
+
+    <TextView
+        android:id="@+id/LastFileItem_Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="FILE20210519_56165461566.docx"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LastFileItem_Icon"
+        app:layout_constraintTop_toTopOf="@+id/LastFileItem_Icon" />
+
+    <TextView
+        android:id="@+id/LastFileItem_Extension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jpg"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/LastFileItem_Icon"
+        app:layout_constraintEnd_toEndOf="@+id/LastFileItem_Icon"
+        app:layout_constraintStart_toStartOf="@+id/LastFileItem_Icon"
+        app:layout_constraintTop_toTopOf="@+id/LastFileItem_Icon"
+        app:layout_constraintVertical_bias="0.70" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MyChat_Audio_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/mychat_layout_margin_from_end"
+    android:layout_marginTop="@dimen/mychat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/mychat_layout_margin_from_end"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MyChat_Audio_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/mychat_layout_margin_start"
+        android:background="@drawable/bubble_mychat"
+        android:elevation="@dimen/mychat_elevation"
+        android:padding="5sp">
+
+
+        <ProgressBar
+            android:id="@+id/MyChat_Audio_ProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/bubble_progress_bar_width_height"
+            android:layout_height="@dimen/bubble_progress_bar_width_height"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MyChat_Audio_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/bubble_timestamp_margin_end"
+            android:text="19:17"
+            android:textColor="@color/myChatTimestampColor"
+            android:textSize="@dimen/bubble_timestamp_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/MyChat_Audio_Tik"
+            app:layout_constraintEnd_toStartOf="@+id/MyChat_Audio_Tik" />
+
+        <ImageView
+            android:id="@+id/MyChat_Audio_Tik"
+            android:layout_width="@dimen/bubble_tik_width_height"
+            android:layout_height="@dimen/bubble_tik_width_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mychat_Audio_SeekBar" />
+
+        <ImageView
+            android:id="@+id/Mychat_Audio_Play"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            app:tint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_play_arrow" />
+
+        <SeekBar
+            android:id="@+id/Mychat_Audio_SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Mychat_Audio_Play"
+            app:layout_constraintTop_toTopOf="@+id/Mychat_Audio_Play" />
+
+        <TextView
+            android:id="@+id/Mychat_Audio_Duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="01:16"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/Mychat_Audio_SeekBar"
+            app:layout_constraintTop_toTopOf="@+id/MyChat_Audio_Time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_surface"
+    android:padding="0sp"
+    tools:context=".RoomActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/RoomActivity_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="0dp"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="#FFFFFF"
+        app:titleTextColor="#FFFFFF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/RoomActivity_Toolbar_BackLayout"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:minWidth="0sp"
+                android:orientation="vertical"
+                android:padding="0sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/RoomActivity_Toolbar_Back"
+                    android:layout_width="30sp"
+                    android:layout_height="match_parent"
+                    android:padding="5sp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/RoomActivity_Toolbar_Pic"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:paddingTop="2sp"
+                android:paddingBottom="2sp"
+                android:transitionName="profilePic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/RoomActivity_Toolbar_BackLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/RoomActivity_Toolbar_VideoCall"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_videocall" />
+
+                <ImageView
+                    android:id="@+id/RoomActivity_Toolbar_Voicecall"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_margin="5sp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_voicecall" />
+
+                <ImageView
+                    android:id="@+id/RoomActivity_Toolbar_Menu"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_margin="5sp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_baseline_dots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RoomActivity_Toolbar_TitleLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+                app:layout_constraintStart_toEndOf="@+id/RoomActivity_Toolbar_Pic"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/RoomActivity_Toolbar_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="TextView"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:transitionName="username" />
+
+                <TextView
+                    android:id="@+id/RoomActivity_Toolbar_Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@android:color/white"
+                    android:transitionName="status" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.arashforus.nearroom.Background_particle
+        android:id="@+id/RoomActivity_BackgroundParticle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomActivity_Toolbar" />
+
+    <com.arashforus.nearroom.Background_Bubbles
+        android:id="@+id/RoomActivity_BackgroundBubbles"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomActivity_Toolbar" />
+
+    <com.arashforus.nearroom.Background_Rainbow
+        android:id="@+id/RoomActivity_BackgroundRainbow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomActivity_Toolbar" />
+
+    <View
+        android:id="@+id/RoomActivity_BackgroundOther"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomActivity_Toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RoomActivity_Buttom_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="10sp"
+        android:paddingBottom="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+            android:id="@+id/RoomActivity_Blocked"
+            layout="@layout/blocked_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="wrap_content"
+            android:layout_height="55sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/RoomActivity_SendMessageLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/RoomActivity_SendOptionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bg_buttom_extra"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/RoomActivity_CameraButton"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/send_menu_option_round"
+                        app:srcCompat="@drawable/ic_baseline_photo_camera"
+                        app:tint="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/RoomActivity_SelectPicButton"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/send_menu_option_round"
+                        app:srcCompat="@drawable/ic_baseline_photo"
+                        app:tint="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/RoomActivity_SelectVideoButton"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/send_menu_option_round"
+                        app:srcCompat="@drawable/ic_baseline_movie"
+                        app:tint="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/RoomActivity_SelectSoundButton"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/send_menu_option_round"
+                        app:srcCompat="@drawable/ic_baseline_music_video"
+                        app:tint="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/RoomActivity_SelectFileButton"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/send_menu_option_round"
+                        app:srcCompat="@drawable/ic_baseline_file_"
+                        app:tint="@android:color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/RoomActivity_SendMessageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/buttom_type_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/RoomActivity_OpenSendMenu"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_attach_file"
+                app:tint="@android:color/black" />
+
+            <EditText
+                android:id="@+id/RoomActivity_Message2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Type your message ..."
+                android:inputType="textMultiLine|text"
+                android:maxLines="5"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:singleLine="true"
+                android:textColor="#191919"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/RoomActivity_SendButtonLayout"
+                app:layout_constraintStart_toEndOf="@+id/RoomActivity_OpenSendMenu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/RoomActivity_SendButtonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/send_button_background"
+                android:gravity="center_vertical"
+                android:minWidth="60sp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="50sp"
+                    android:layout_height="40sp"
+                    android:layout_weight="1"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_dots" />
+
+                <ImageView
+                    android:id="@+id/RoomActivity_SendButtonIcon"
+                    android:layout_width="30sp"
+                    android:layout_height="35sp"
+                    android:layout_weight="1"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_baseline_send" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RoomActivity_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/RoomActivity_Buttom_Layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomActivity_SearchBar" />
+
+    <include
+        android:id="@+id/RoomActivity_SearchBar"
+        layout="@layout/search_bar_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RoomActivity_Toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

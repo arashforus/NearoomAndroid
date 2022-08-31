@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ViewContactActivity_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewContactActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ViewContactActivity_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/toolbarSubtitleColor"
+        app:titleTextColor="@color/toolbarTitleColor" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ViewContactActivity_ScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ViewContactActivity_Toolbar">
+
+        <LinearLayout
+            android:id="@+id/ViewContactActivity_LinearLayoutOuter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ViewContactActivity_InfoIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/ViewContactActivity_InfoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Picture and Info"
+                    android:textAlignment="center"
+                    android:textColor="@color/viewContactTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ViewContactActivity_ProfilePic"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:scaleType="centerCrop"
+                        android:transitionName="pic"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_UsernameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Username"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_UsernameValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="10sp"
+                        android:text="arashforus"
+                        android:textColor="@color/viewContactText"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_FullnameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Fullname"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_FullnameValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="10sp"
+                        android:text="Arash sohrabi"
+                        android:textColor="@color/viewContactText"
+                        android:textSize="18sp"
+                        android:transitionName="title" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_StatusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Status"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_StatusValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="10sp"
+                        android:text="work hard or go home"
+                        android:textColor="@color/viewContactText"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_PhoneNumberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Phone number"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_PhoneNumberValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="textPersonName|text"
+                        android:padding="10sp"
+                        android:text="+98 912 703 6690"
+                        android:textColor="@color/viewContactText"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ViewContactActivity_StaticsIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/ViewContactActivity_StaticsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Statics"
+                    android:textAlignment="center"
+                    android:textColor="@color/viewContactTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                    app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                    app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_MessagesSentText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:text="Messages Sent"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactSubtitle"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_MessagesSentNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactText"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_MessagesSentUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="messages"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="5sp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                    app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                    app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_MessagesReceivedText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:text="Messages get"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactSubtitle"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_MessagesReceivedNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactText"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_MessagesReceivedUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="messages"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="5sp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                    app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                    app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_FromFirstMessageText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:text="First message"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactSubtitle"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_FromFirstMessageNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactText"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/ViewContactActivity_FromFirstMessageUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="days ago"
+                            android:textAlignment="center"
+                            android:textColor="@color/viewContactText" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ViewContactActivity_ActionsIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/ViewContactActivity_ActionsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Actions"
+                    android:textAlignment="center"
+                    android:textColor="@color/viewContactTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/ViewContactActivity_MuteNotificationSwitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="Mute notifications"
+                        android:textColor="@color/viewContactText"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/ViewContactActivity_BlockedButton"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Block" />
+
+                    <Button
+                        android:id="@+id/ViewContactActivity_ReportButton"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Report" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ViewContactActivity_MediasIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/ViewContactActivity_MediasTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Medias"
+                    android:textAlignment="center"
+                    android:textColor="@color/viewContactTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_ImagesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Images"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_NoImageText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/ViewContactActivity_ImagesRecyclerView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_VideosText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Videos"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_NoVideoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No Video"
+                        android:textAlignment="center"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/ViewContactActivity_VideosRecyclerView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/myprofile_activity_divider_height"
+                        android:layout_margin="@dimen/myprofile_activity_divider_margin"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_FilesText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:text="Files"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_NoFileText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No File"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:textColor="@color/viewContactSubtitle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ViewContactActivity_FilesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ViewContactActivity_NearoomIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingRight="10sp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/ViewContactActivity_NearoomTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_weight="1"
+                    android:text="Nearoom joined"
+                    android:textAlignment="center"
+                    android:textColor="@color/viewContactTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/myprofile_activity_cardview_layout_margin"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/myprofile_activity_cardview_corner_radious"
+                app:cardElevation="@dimen/myprofile_activity_cardview_elevation"
+                app:contentPadding="@dimen/myprofile_activity_cardview_content_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ViewContactActivity_NoNearoomText"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:gravity="center"
+                        android:text="No joint nearoom"
+                        android:textAlignment="center"
+                        android:textColor="@color/viewContactSubtitle"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ViewContactActivity_NearoomsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/ViewContactActivity_FullProfilePic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

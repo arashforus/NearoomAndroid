@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Yourchat_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:layout_marginStart="@dimen/yourchat_layout_margin_from_start"
+    android:layout_marginTop="@dimen/yourchat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/yourchat_layout_margin_from_start"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/YourChat_File_Layout"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginEnd="@dimen/yourchat_layout_margin_end"
+        android:background="@drawable/bubble_yourchat"
+        android:elevation="@dimen/yourchat_elevation">
+
+        <TextView
+            android:id="@+id/YourChat_File_Sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/YourChat_File_Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="File202104053616165.jpg"
+            android:textColor="@color/yourChatMessageColor"
+            android:textSize="@dimen/bubble_message_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/YourChat_File_Icon"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_File_Sender" />
+
+        <TextView
+            android:id="@+id/YourChat_File_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:17"
+            android:textColor="@color/yourChatTimestampColor"
+            android:textSize="@dimen/bubble_timestamp_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_File_Name" />
+
+        <ImageView
+            android:id="@+id/YourChat_File_Icon"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_File_Sender"
+            app:srcCompat="@drawable/ic_baseline_file_"
+            app:tint="@android:color/black" />
+
+        <TextView
+            android:id="@+id/YourChat_File_Extension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jpg"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/YourChat_File_Icon"
+            app:layout_constraintEnd_toEndOf="@+id/YourChat_File_Icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/YourChat_File_Icon"
+            app:layout_constraintVertical_bias="0.65999997" />
+
+        <ImageView
+            android:id="@+id/YourChat_File_DownloadIcon"
+            android:layout_width="15sp"
+            android:layout_height="15sp"
+            app:tint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/YourChat_File_Name"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_File_Name"
+            app:srcCompat="@drawable/ic_baseline_download" />
+
+        <TextView
+            android:id="@+id/YourChat_File_Size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="320 Kb"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/YourChat_File_DownloadIcon"
+            app:layout_constraintTop_toBottomOf="@+id/YourChat_File_Name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/yourChatBubbleColor" />
+    <corners android:radius="@dimen/yourchat_radious" />
+    <corners android:topLeftRadius="@dimen/yourchat_top_left_radious" />
+    <padding
+        android:bottom="@dimen/yourchat_padding_bottom"
+        android:top="@dimen/yourchat_padding_top"
+        android:left="@dimen/yourchat_padding_left"
+        android:right="@dimen/yourchat_padding_right" />
+
+</shape>

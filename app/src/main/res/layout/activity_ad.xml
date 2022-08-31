@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/AdActivity_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/toolbarSubtitleColor"
+        app:titleTextColor="@color/toolbarTitleColor" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/AdActivity_AdView1"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintTop_toBottomOf="@+id/AdActivity_Toolbar" />
+
+    <TextView
+        android:id="@+id/AdActivity_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="This application has been developed by one person and has been launched with the least facilities and financial support, so in order to continue its activities, support and development requires a lot of costs that are beyond the developer's ability, and for the welfare of users, advertising has been removed in the program to have a better and more pleasant experience of this application. So let's all use supportive methods such as sponsorship, watching commercial ads or donating to continue this activity."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/AdActivity_AdView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AdActivity_AdView1" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/AdActivity_AdView2"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

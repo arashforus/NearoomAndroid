@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MyChat_Video_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/mychat_layout_margin_from_end"
+    android:layout_marginTop="@dimen/mychat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/mychat_layout_margin_from_end"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MyChat_Video_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/mychat_layout_margin_start"
+        android:background="@drawable/bubble_mychat"
+        android:elevation="@dimen/mychat_elevation"
+        android:padding="5sp">
+
+
+        <ImageView
+            android:id="@+id/MyChat_Video_Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ProgressBar
+            android:id="@+id/MyChat_Video_ProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/bubble_progress_bar_width_height"
+            android:layout_height="@dimen/bubble_progress_bar_width_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MyChat_Video_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/bubble_timestamp_margin_end"
+            android:shadowColor="@color/myChatTimeShadowColor"
+            android:shadowRadius="15"
+            android:text="19:17"
+            android:textColor="@color/myChatTimestampColor"
+            android:textSize="@dimen/bubble_timestamp_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/MyChat_Video_Tik"
+            app:layout_constraintEnd_toStartOf="@+id/MyChat_Video_Tik" />
+
+        <ImageView
+            android:id="@+id/MyChat_Video_Tik"
+            android:layout_width="@dimen/bubble_tik_width_height"
+            android:layout_height="@dimen/bubble_tik_width_height"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/MyChat_Video_Image"
+            app:layout_constraintEnd_toEndOf="@+id/MyChat_Video_Image" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MyChat_Video_Download_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="@dimen/bubble_download_layout_alpha"
+            android:background="@drawable/download_layout_my"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/MyChat_Video_Download_Icon"
+                android:layout_width="@dimen/bubble_download_icon_width_height"
+                android:layout_height="@dimen/bubble_download_icon_width_height"
+                android:padding="5sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/stat_sys_download_done"
+                app:tint="@color/myChatDownloadIconColor" />
+
+            <TextView
+                android:id="@+id/MyChat_Video_Size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="12MB"
+                android:textColor="@color/myChatFileSizeColor"
+                android:textSize="@dimen/bubble_filesize_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/MyChat_Video_Download_Icon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

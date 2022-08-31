@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841283672638",
+    "project_id": "nearoom-6690",
+    "storage_bucket": "nearoom-6690.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841283672638:android:f42dafd6fd0924613a8f6f",
+        "android_client_info": {
+          "package_name": "com.arashforus.nearroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841283672638-m5tk1kdjg4jtsurdvl9j5nkje27q41cf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1FUhspV6cT_61B7EWLlKq0WoumKvdIUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841283672638-m5tk1kdjg4jtsurdvl9j5nkje27q41cf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

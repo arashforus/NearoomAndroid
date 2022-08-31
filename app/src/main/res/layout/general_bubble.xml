@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GeneralBubble_LayoutAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/mychat_layout_margin_from_end"
+    android:layout_marginTop="@dimen/mychat_layout_margin_from_top"
+    android:layout_marginEnd="@dimen/mychat_layout_margin_from_end"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/chat_date_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/GeneralBubble_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="@dimen/mychat_elevation">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            app:cardBackgroundColor="@color/Slider1Color"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="0sp"
+            app:contentPaddingBottom="5sp"
+            app:contentPaddingLeft="10sp"
+            app:contentPaddingRight="10sp"
+            app:contentPaddingTop="5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/GeneralBubble_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You joined the nearoom"
+                android:textAlignment="center"
+                android:textColor="@color/myChatMessageColor"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

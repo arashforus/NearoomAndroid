@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/PrivateMenu_VideoCall"
+        android:icon="@drawable/iconfinder_video_call_2639945"
+        android:title="VideoCall"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/PrivateMenu_Call"
+        android:icon="@drawable/iconfinder_phone_2639886"
+        android:title="call"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/PrivateMenu_ViewContact"
+        android:title="View Contact" />
+    <item
+        android:id="@+id/PrivateMenu_Search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/PrivateMenu_DeleteHistory"
+        android:title="Delete history" />
+    <item
+        android:id="@+id/PrivateMenu_Block"
+        android:title="Block" />
+    <item
+        android:id="@+id/PrivateMenu_Report"
+        android:title="Report" />
+</menu>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/contact_item_layout_padding_start"
+    android:paddingTop="@dimen/contact_item_layout_padding_top"
+    android:paddingEnd="@dimen/contact_item_layout_padding_end"
+    android:paddingBottom="@dimen/contact_item_layout_padding_bottom">
+
+    <ImageView
+        android:id="@+id/ContactsItemOnline_ProfilePic"
+        android:layout_width="@dimen/contact_item_profile_size"
+        android:layout_height="@dimen/contact_item_profile_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ContactsItemOnline_ProfilePic"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ContactsItemOnline_Fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="TextView"
+                android:textColor="@color/recyclerViewContactsFullName"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ContactsItemOnline_Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="TextView"
+                android:textColor="@color/recyclerViewContactsUsername"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ContactsItemOnline_Status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fadingEdge="vertical"
+                android:maxLines="1"
+                android:text="TextView"
+                android:textColor="@color/recyclerViewContactsStatus"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ContactsItemOnline_Online"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last seen"
+                android:textAlignment="center"
+                android:textColor="@color/buttonPositive"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ContactsItemOnline_OnlineSubtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12:40"
+                android:textAlignment="center"
+                android:textColor="@color/buttonPositive"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
